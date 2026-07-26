@@ -161,3 +161,29 @@ h3 {
   white-space: nowrap;
   border: 0;
 }
+
+/* 404 */
+.not-found-title {
+  font-size: 5rem;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found p {
+  margin-bottom: 2rem;
+}
+
+.not-found-link {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: var(--brand-color);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--button-radius);
+  transition: background-color 0.3s ease;
+}
+
+.not-found-link:hover {
+  background-color: var(--button-click);
+}
