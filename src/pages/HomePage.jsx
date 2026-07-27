@@ -1,12 +1,78 @@
-import heroImg from "../assets/hero-img.jpg"
+import { Link } from "react-router";
+import heroImg from "../assets/hero-img.jpg";
+import projects from "../projects";
+import ProjectCard from "../components/ProjectCard";
 
 export default function HomePage() {
+  const skills = [
+    "Figma", "VS Code", "React"
+  ]
+
   return (
     <div>
-      <h1>Home</h1>
       <article>
-        <img src={heroImg} alt="" />
+        <img src={heroImg} alt="" className="hero-img"/>
       </article>
+
+      <div className="page">
+        <section>
+          <h2>Explore my work</h2>
+          <div>
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2>Currently working on</h2>
+          <p>...</p>
+        </section>
+
+        <section>
+          <h2>How I work</h2>
+          <p>
+            Research - Ideation - Wireframing - Prototyping - Testing -
+            Development
+          </p>
+        </section>
+
+        <section>
+          <h2>Programs</h2>
+          {skills.map((skill) => (
+            <p className="stack">{skill}</p>
+          ))}
+        </section>
+
+        <section>
+          <h2>About me</h2>
+          <p>...</p>
+          <Link to="/about">Read more</Link>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <h3>Email: kejserfreja@gmail.com</h3>
+          <h3>
+            <a
+              href="https://www.linkedin.com/in/freja-kejser-00605b383"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </h3>
+          <h3>
+            <a
+              href="https://github.com/FKAYSR"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </h3>
+        </section>
+      </div>
     </div>
   );
 }

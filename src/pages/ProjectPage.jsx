@@ -8,8 +8,8 @@ export default function ProjectPage() {
 
   return (
     <div>
-      <h1>Projekt detalje side</h1>
-      {project ? <p>{project.title}</p> : <p>Projektet findes ikke...</p>}
+      <h1>Projekt detail page</h1>
+      {project ? <p>{project.title}</p> : <p>The project doesn't exist...</p>}
     </div>
   );
 }
