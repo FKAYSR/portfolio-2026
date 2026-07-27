@@ -10,8 +10,16 @@ export default function HomePage() {
 
   return (
     <div>
-      <article>
-        <img src={heroImg} alt="" className="hero-img"/>
+      <article className="hero">
+        <img src={heroImg} alt="" className="hero-img" />
+        <div className="hero-text">
+          <h1>Freja Kejser</h1>
+          <ul className="hero-list">
+            <li>Exploring ideas</li>
+            <li>Designing experiences</li>
+            <li>Building interactions</li>
+          </ul>
+        </div>
       </article>
 
       <div className="page">
