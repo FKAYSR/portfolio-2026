@@ -4,9 +4,7 @@ import projects from "../projects";
 import ProjectCard from "../components/ProjectCard";
 
 export default function HomePage() {
-  const skills = [
-    "Figma", "VS Code", "React"
-  ]
+  const skills = ["Figma", "VS Code", "React"];
 
   return (
     <div>
@@ -26,9 +24,11 @@ export default function HomePage() {
         <section>
           <h2>Explore my work</h2>
           <div>
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
+            {projects
+              .filter((project) => project.featured)
+              .map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
           </div>
         </section>
 
@@ -48,7 +48,9 @@ export default function HomePage() {
         <section>
           <h2>Programs</h2>
           {skills.map((skill) => (
-            <p className="stack">{skill}</p>
+            <p key={skill} className="stack">
+              {skill}
+            </p>
           ))}
         </section>
 
