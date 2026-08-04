@@ -215,6 +215,7 @@ p {
   background: rgba(246, 243, 238, 0.8);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
+   border-bottom: 1px solid rgba(57, 25, 36, 0.08); 
   box-shadow: var(--shadow);
 }
 
@@ -300,6 +301,36 @@ p {
   font-family: var(--font-sans);
   font-size: var(--fs-body);
   line-height: 1.1;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  opacity: 0.9;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hero-scroll-indicator-icon {
+  width: 2rem;
+  animation: chevron-bounce 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes chevron-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
 }
 /* #endregion */
 

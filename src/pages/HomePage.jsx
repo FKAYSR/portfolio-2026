@@ -5,6 +5,7 @@ import projects from "../projects";
 import ProjectCard from "../components/ProjectCard";
 import NameTitle from "../components/NameTitle";
 import arrowIcon from "../assets/icons/arrow-white-down.svg";
+import chevronIcon from "../assets/icons/chevron.svg"
 
 export default function HomePage({scrolled}) {
   const skills = [
@@ -44,9 +45,19 @@ export default function HomePage({scrolled}) {
               aria-label="Explore my work"
             >
               <span className="hero-button-text">Explore my work</span>
-              <img src={arrowIcon} alt="" className="hero-button-icon"/>
+              <img src={arrowIcon} alt="" className="hero-button-icon" />
             </Link>
           </div>
+        </div>
+
+        <div>
+          <Link to="/#projects" className="hero-scroll-indicator" aria-label="Scroll to see projects">
+            <img
+              src={chevronIcon}
+              alt=""
+              className="hero-scroll-indicator-icon"
+            />
+          </Link>
         </div>
       </article>
 
