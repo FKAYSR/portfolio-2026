@@ -321,6 +321,11 @@ p {
   width: 2rem;
   animation: chevron-bounce 2s ease-in-out infinite;
   transform-origin: center;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.hero-scroll-indicator:hover .hero-scroll-indicator-icon {
+  filter: brightness(0.7);
 }
 
 @keyframes chevron-bounce {
