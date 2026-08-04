@@ -4,6 +4,7 @@ import heroImg from "../assets/hero-img.jpg";
 import projects from "../projects";
 import ProjectCard from "../components/ProjectCard";
 import NameTitle from "../components/NameTitle";
+import arrowIcon from "../assets/icons/arrow-white-down.svg";
 
 export default function HomePage({scrolled}) {
   const skills = [
@@ -34,9 +35,18 @@ export default function HomePage({scrolled}) {
             <NameTitle variant="hero" />
           </h1>
 
-          <h3 className="hero-list">
-            UX/UI designer & Frontend Developer
-          </h3>
+          <h3 className="hero-list">UX/UI designer & Frontend Developer</h3>
+
+          <div className="hero-button-wrap">
+            <Link
+              to="/#projects"
+              className="hero-button"
+              aria-label="Explore my work"
+            >
+              <span className="hero-button-text">Explore my work</span>
+              <img src={arrowIcon} alt="" className="hero-button-icon"/>
+            </Link>
+          </div>
         </div>
       </article>
 

@@ -5,7 +5,8 @@
 :root {
   --font-display: "Oswald", sans-serif;
   --font-sans:
-    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
 
@@ -188,7 +189,9 @@ p {
   right: 0;
   z-index: 1000;
   height: 4rem;
-  transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .navbar-div {
@@ -201,13 +204,17 @@ p {
 }
 
 .navbar-hero {
-  background: rgba(246, 243, 238, 0.35);
-  border-bottom: 1px solid transparent;
+  background: rgba(246, 243, 238, 0.2);
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  border-bottom: 1px solid rgba(57, 25, 36, 0.08);
   box-shadow: none;
 }
 
 .navbar-solid {
-  background: var(--color-bg);
+  background: rgba(246, 243, 238, 0.8);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
   box-shadow: var(--shadow);
 }
 
@@ -247,20 +254,52 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   padding: 2rem;
   z-index: 1;
   margin-left: clamp(0rem, 8vw, 10rem);
 }
 
 .hero-title {
+  display: block;
   margin: 0;
-  line-height: 1;
+  transform: translateX(-0.1em);
 }
 
 .hero-list {
+  display: block;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 2rem 0 0;
+}
+
+.hero-button-wrap {
+  margin-top: 1.25rem;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.6rem 2rem;
+  border-radius: 0.75rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero-button:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+.hero-button-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.1;
 }
 /* #endregion */
 
@@ -285,8 +324,8 @@ p {
 }
 
 .brand-title-navbar {
-  font-size: 1.5rem;
-  line-height: 0.9;
+  font-size: 1.8rem;
+  line-height: 0.8;
   color: var(--color-accent);
 }
 
